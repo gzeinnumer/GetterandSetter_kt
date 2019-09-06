@@ -9,25 +9,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val p = Person()
-        p.fname = "Zein"
-        p.mname = "Zein"
-        p.lname = "Pai"
-        println({p.fname})
-        println({p.mname})
-        println({p.lname})
+        p.umurAsli =15
+        p.umur=15
+        p.name="Zein"
+        println("P : umur = ${p.umur}")
+        println("P : umurAsli = ${p.umurAsli}")
+        println("P : name = ${p.name}")
+
+        val q = Person()
+        q.umurAsli =35
+        q.umur=35
+        println("Q : umur = ${q.umur}")
+        println("Q : umurAsli = ${q.umurAsli}")
     }
 }
 
 class Person{
-    var fname: String = "default value"
+    var umur: Int = 0
     get() = field
 
     set(value){
         field = value
     }
 
-    var lname:String = "default value"
+    var umurAsli:Int = 0
 
-    var mname:String = "default value"
+    var name:String = "default value"
 
 }
